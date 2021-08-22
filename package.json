@@ -1,0 +1,19 @@
+{
+  "name": "stuffy-selector",
+  "version": "1.0.0",
+  "description": "To select Havok's stuffies in the evening",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirHavok/stuffy-selector.git"
+  },
+  "author": "Havok The Bear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SirHavok/stuffy-selector/issues"
+  },
+  "homepage": "https://github.com/SirHavok/stuffy-selector#readme"
+}
