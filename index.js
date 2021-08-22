@@ -1,3 +1,6 @@
+//TODO: Fix members being found a second time
+//TODO: Fix settimout
+
 const dotenv = require('dotenv');
 dotenv.config();
 const token = process.env.TOKEN;
