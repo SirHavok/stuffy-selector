@@ -86,14 +86,16 @@ const Intro = async (message) => {
     membersNotResponded = [];
 
     message.channel.send(`Picking a member to pick Havok's Stuffie`);
-    RandomMember(message)
+    PickMember(message)
 }
 
-const RandomMember = async (message) => {
+const PickMember = async (message) => {
     const membersWithRole = message.guild.roles.resolve('878951249049948190').members;
 
-    console.log(Object.keys(membersWithRole).length)
-    //Not Working!
+    if(membersWithRole.size <= membersNotResponded.length) {
+        alreadyResponded = true;
+        message.channel.send("We have run out of members. Havok will pick himself")
+    }
 
     const RandomMember = membersWithRole.random().user;
     MessageMember(message, RandomMember);
@@ -104,8 +106,7 @@ const MessageMember = async (message, RandomMember) => {
     newMessage.react('✅');
     messageToWatch = newMessage.id;
     authorToWatch = RandomMember.id;
-    alreadyResponded = false;
-    setTimeout(() => {
+    setTimeout((message) => {
         if(alreadyResponded = false) {
             membersNotResponded.push(RandomMember.id);
             RandomMember(message);
